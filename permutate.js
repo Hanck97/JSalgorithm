@@ -1,5 +1,6 @@
 // input: abc 
 // output: abc acb bac bca cab cba
+// 全排列
 
 function permutate(str) {
     if (str == null) {
