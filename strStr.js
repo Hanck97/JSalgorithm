@@ -14,3 +14,4 @@ var strStr = function(haystack, needle) {
     }
     return match.index;
 };
+
