@@ -49,3 +49,18 @@ function bubbleSort (array) {
     return array;
 }   
 
+
+// 归并排序
+function mergeSort(arr) {
+    if(arr.length < 2) return arr
+    let mid = parseInt(arr.length/2);
+    return merge(mergeSort(arr.slice(0, mid)), mergeSort(arr.slice(mid)))
+}
+
+function merge(leftArr, rightArr) {
+    var resultArr = []
+    while(leftArr.length && rightArr.length) {
+      resultArr.push(leftArr[0] <= rightArr[0] ? leftArr.shift() : rightArr.shift())
+    }
+    return resultArr.concat(leftArr).concat(rightArr)
+}
